@@ -1,0 +1,31 @@
+Tabs.Main:AddButton({ Title = "Remover Lag e Texturas", Callback = function() 
+    local player = game.Players.LocalPlayer
+    local character = player.Character or player.CharacterAdded:Wait()
+
+    -- Desativar texturas
+    for _, part in pairs(workspace:GetDescendants()) do
+        if part:IsA("BasePart") then
+            part.Material = Enum.Material.SmoothPlastic
+            if part:FindFirstChildOfClass("Decal") then
+                part:FindFirstChildOfClass("Decal"):Destroy()
+            end
+            if part:FindFirstChildOfClass("Texture") then
+                part:FindFirstChildOfClass("Texture"):Destroy()
+            end
+        end
+    end
+
+    -- Desativar efeitos de partículas
+    for _, effect in pairs(workspace:GetDescendants()) do
+        if effect:IsA("ParticleEmitter") or effect:IsA("Trail") then
+            effect.Enabled = false
+        end
+    end
+
+    -- Desativar iluminação desnecessária
+    game.Lighting.GlobalShadows = false
+    game.Lighting.FogEnd = 9e9
+    game.Lighting.Brightness = 0
+
+    print("Lag e texturas removidos")
+end })
