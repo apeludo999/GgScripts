@@ -13,7 +13,6 @@ local OrionLib = {
 	Themes = {
 		Default = {
 			Main = Color3.fromRGB(0, 0, 0), -- Fundo principal em preto
-			Main.BackgroundTransparency = 0.5 -- Transparência do fundo principal
 			Second = Color3.fromRGB(25, 25, 25), -- Segundo plano em cinza escuro
 			Stroke = Color3.fromRGB(148, 0, 211), -- Borda roxa forte
 			Divider = Color3.fromRGB(60, 60, 60), -- Divisor em cinza escuro
