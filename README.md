@@ -1,3 +1,4 @@
 # APELUDO999
-todos os meus projeto/scripts 
+*equipe ZKM Team*
+*todos os projeto/scripts*
 
